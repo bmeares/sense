@@ -7,5 +7,5 @@ Meerschaum plugin for the Raspberry Pi Sense HAT.
 """
 
 from .fetch import fetch
-__version__ = '0.0.4'
+__version__ = '1.0.0'
 required = ['sense-hat']
