@@ -16,7 +16,9 @@ def fetch(pipe, **kw):
     if _sense is None:
         _sense = SenseHat()
 
-    pipe.columns = sense_config()['columns'].copy()
+    if not pipe.columns:
+        pipe.columns = sense_config()['columns'].copy()
+        pipe.edit()
     sensor_id = sense_config()['sensor_id']
 
     return {
